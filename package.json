@@ -1,0 +1,31 @@
+{
+  "name": "pg-app",
+  "version": "1.0.0",
+  "description": "Simple app using postgres with pg",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint './**/*.js'",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewglover/pg-app.git"
+  },
+  "author": "Matt Glover (https://github.com/matthewglover)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matthewglover/pg-app/issues"
+  },
+  "homepage": "https://github.com/matthewglover/pg-app#readme",
+  "devDependencies": {
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "husky": "^0.11.9"
+  },
+  "dependencies": {
+    "@matthewglover/hapi-wrapper": "^0.2.5"
+  }
+}
