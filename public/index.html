@@ -5,20 +5,30 @@
     <title>Home page</title>
   </head>
   <body>
-    <h1>Pups</h1>
-    <ul id="pups"></ul>
+    <h1>Static Pups</h1>
+    <ul id="static-pups"></ul>
+
+    <br>
+
+    <h1>Dynamic Pups</h1>
+    <ul id="dynamic-pups"></ul>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
-      axios
-      .get(`/api/pups`)
-      .then(o => o.data)
-      .then(renderPups);
+    const renderPups = (id) => (pups) => {
+      document.querySelector(id).innerHTML =
+        pups.map(pup => `<li>${pup.name}, ${pup.speciality}</li>`).join('');
+    }
 
-      function renderPups(pups) {
-        document.querySelector('#pups').innerHTML =
-          pups.map(pup => `<li>${pup.name}, ${pup.speciality}</li>`).join('');
-      }
+    axios
+    .get(`/api/static-pups`)
+    .then(o => o.data)
+    .then(renderPups('#static-pups'));
+
+    axios
+    .get(`/api/dynamic-pups`)
+    .then(o => o.data)
+    .then(renderPups('#dynamic-pups'));
     </script>
   </body>
 </html>

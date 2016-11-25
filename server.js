@@ -1,8 +1,11 @@
+const env = require('env2');
 const {
   createServer,
   setConnection,
   addRoutes,
   startServer } = require('@matthewglover/hapi-wrapper');
+
+env('./local.env');
 
 const routes = require('./routes');
 
