@@ -17,6 +17,7 @@ module.exports = [
     handler: (req, reply) => {
       getPups((error, pups) => {
         if (error) console.log('oops', error);
+        console.log(pups);
         reply(pups);
       });
     },

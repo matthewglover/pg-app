@@ -26,6 +26,8 @@
     "husky": "^0.11.9"
   },
   "dependencies": {
-    "@matthewglover/hapi-wrapper": "^0.2.5"
+    "@matthewglover/hapi-wrapper": "^0.2.5",
+    "env2": "^2.1.1",
+    "pg": "^6.1.0"
   }
 }

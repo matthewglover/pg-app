@@ -24,6 +24,11 @@
     .get(`/api/static-pups`)
     .then(o => o.data)
     .then(renderPups('#static-pups'));
+
+    axios
+    .get(`/api/dynamic-pups`)
+    .then(o => o.data)
+    .then(renderPups('#dynamic-pups'));
     </script>
   </body>
 </html>
